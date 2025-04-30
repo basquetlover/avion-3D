@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Alas | 3D AIRLINES</title>
+  <link href="stilo.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <link rel="shortcut icon" href="https://i.ibb.co/j8p59rB/logo-aerolinea.png" sizes="300x300" type="image/x-icon">
+</head>
+  <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
+  <script src="loader.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="module" src="model-viewer.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.contenedor').on('click', function() {
+      $(this).find('.hamburguesa').toggleClass('active');
+      $(this).siblings('.submenu').toggleClass('active');
+    });
+  });
+
+</script>
+  <script>
+$(document).ready(function() {
+  $('.des-contenedor').on('click', function() {
+    var $items = $(this).find('.items');
+    var $iconoDes = $(this).find('.icono-des');
+    var $enlace = $(this).find('.btn-descarga');
+
+    $items.toggleClass('active');
+    $iconoDes.toggleClass('active');
+    
+    // Cambiar texto después de 2 segundos
+    setTimeout(function() {
+      $items.removeClass('active');
+      $iconoDes.removeClass('active');
+      
+      // Actualizar el texto del enlace
+      $enlace.text('Descarga completada');
+    }, 2000); // 2000 milisegundos = 2 segundos
+  });
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    const contenedor = $('.nombre');
+    const texto = contenedor.find('#texto');
+    const tamañoBase = 70; // Tamaño de letra base: 70px
+
+    function ajustarTexto() {
+      const contenedorAncho = contenedor.innerWidth();
+      const fontSize = (contenedorAncho / texto.text().length) * 2;
+
+      texto.css('font-size', fontSize + 'px');
+    }
+
+    $(window).resize(ajustarTexto);
+    ajustarTexto();
+  });
+</script>
+  
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-img">
+    <img src="https://i.ibb.co/j8p59rB/logo-aerolinea.png" alt="logo-aerolinea">
+    </div>
+    <div class="loader-order">
+    <p>3D Airlines</p>
+
+    </div>
+  </div>
+<div class="order-body">
+  <header>
+    <div class="menu">
+        <div class="contenedor">
+    <div class="hamburguesa"></div>
+  </div>
+
+      <ul class="submenu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="alas.html">Alas</a></li>
+      <li><a href="fuselaje.html">Fuselaje</a></li>
+      <li><a href="timon.html">Timón</a></li>
+        </ul>
+    </div>   
+    <div class="titulo">
+     <div class="imagen">
+        <img src="https://i.ibb.co/j8p59rB/logo-aerolinea.png">
+      </div>
+      <div class="nombre">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Prompt:ital,wght@0,200;0,300;0,900;1,200&display=swap" rel="stylesheet">
+
+       <b><center><p id="texto">3D Airlines</p></center></b>
+      </div>
+    </div>
+ </header>
+<main>
+  <div class="introduccion">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,600;0,300;1,200&display=swap" rel="stylesheet">
+
+    <center><h1><b>DEPARTAMENTO DE ALAS</b></h1>
+    <h2><i>Compuesto por Pau Cifre Vadell y Alejandro Uriel Montelongo.</i></h2></center>
+  </div>
+&nbsp;
+<div class="titulo-seccion-alas">
+   <h1><b>COMO HACEMOS NUESTRAS ALAS:</b></h1>
+</div>
+
+<div class="info-alas">
+  <div class="texto-alas">
+    <h2>1. Inspiración con imágenes</h2>
+    <p>Para empezar, como con todo en la vida, tuvimos que buscar una inspiración</p>
+    <p>Para ello, buscamos fotos de alas de diferentes tipos de aviones para tener una idea general sobre nuestro diseño.</p>
+    <p>Después de considerar multiples tipos de alas, decidimos quedarnos con el tipo de ala que los aviones comerciales usan, como los Boeing o los Airbus.</p>
+  </div>
+  <div class="imagen-alas">
+    <img src="img/alas.png" ></img>
+   </div>
+  </div>
+  
+<div class="info-alas">
+  <div class="imagen-alas">
+    <img src="img/qcadalas.png" ></img>
+   </div>
+     <div class="texto-alas">
+    <h2>2. Prueba de concepto en un software de CAD en 2D.</h2>
+    <p>Al tener una idea general sobre las alas, el equipo hizo un simple “sketch” con un programa de edición CAD en 2D (QCAD), para tener una prueba de concepto.</p>
+
+    </div>
+ </div>
+  
+<div class="info-alas">
+  <div class="texto-alas">
+    <h2>3. Recreación de la prueba en FreeCAD (3D)</h2>
+    <p>Para empezar, como con todo en la vida, tuvimos que buscar una inspiración</p>
+    <p>Para ello, buscamos fotos de alas de diferentes tipos de aviones para tener una idea general sobre nuestro diseño.</p>
+    <p>Después de considerar multiples tipos de alas, decidimos quedarnos con el tipo de ala que los aviones comerciales usan, como los Boeing o los Airbus.</p>
+  </div>
+  <div class="imagen-alas">
+    <img src="img/freecadavion.png" ></img>
+   </div>
+</div>
+  
+<div class="titulo-seccion-alas-final">
+ <h1><b>RESULTADO FINAL:</b></h1>
+   <div class="modelo-alas">
+    <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="Alas_Avion.glb" shadow-intensity="1" camera-controls touch-action="pan-z"></model-viewer>
+  </div> 
+</div>
+  
+&nbsp;
+  <div class="descargar-alas">
+  <div class="des-contenedor">
+    <div class="items">
+    <div class="icono-des"><img src="img/icono-des.png"></div>
+    <a href="obj/Alas_Avion.obj" class="btn-descarga" download="Alas_Avion.obj" type="application/octet-stream">  Descargar Modelo</a>
+    </div>
+  </div>
+</div>
+  
+&nbsp;
+  
+</main>
+  
+<footer>
+
+    <div class="participantes">
+      <div class="titulo-participantes">
+        <a><b>Participantes</b></a>
+      </div>
+      <div class="imagen-logo">
+        <li><img src="https://i.ibb.co/H4t9nQF/foto-perfil-pere.png" height="20px" width="20px"></li>
+        <li><img src="https://i.ibb.co/0KhNQK4/foto-perfil-pau.jpg" height="20px" width="20px"></li>
+        <li><img src="https://i.ibb.co/5T7kCnr/foto-perfil-uri.png" height="20px" width="20px"></li>
+        <li><img src="https://i.ibb.co/wsVTpNZ/foto-perfil-javi.png" height="20px" width="20px"></li>
+        <li><img src="https://i.ibb.co/MSSGtsp/foto-perfil-robin.png" height="20px" width="20px"></li>
+      </div>
+      <div class="lista-participantes">
+        <li><a>Pere Alemany Tomàs</a></li>
+        <li><a>Pau Cifre Vadell</a></li>
+        <li><a>Alejandro Uriel Montelongo</a></li>
+        <li><a>Javier García Monsálvez</a></li>
+        <li><a>Robin de la Cruz Melecio</a></li>
+      </div>
+    </div>
+
+    
+    <div class="contacto">
+      <div class="titulo-contacto">
+        <a><b>Contacto</b></a>
+      </div>
+      <div class="lista-contactos">
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gmail_Icon_%282013-2020%29.svg/1024px-Gmail_Icon_%282013-2020%29.svg.png" height="10px" width="15px"><a>palemanyt@iesbaltasarporcel.net</a></li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gmail_Icon_%282013-2020%29.svg/1024px-Gmail_Icon_%282013-2020%29.svg.png" height="10px" width="15px"><a>pcifrev@iesbaltasarporcel.net</a></li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gmail_Icon_%282013-2020%29.svg/1024px-Gmail_Icon_%282013-2020%29.svg.png" height="10px" width="15px"><a>amontelongo@iesbaltasarporcel.net</a></li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gmail_Icon_%282013-2020%29.svg/1024px-Gmail_Icon_%282013-2020%29.svg.png" height="10px" width="15px"><a>jgarciam@iesbaltasarporcel.net</a></li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gmail_Icon_%282013-2020%29.svg/1024px-Gmail_Icon_%282013-2020%29.svg.png" height="10px" width="15px"><a>rcruzm@iesbaltasarporcel.net</a></li>
+        </div>
+      
+    </div>
+</footer>
+  </div>
+</body>
+
+</html>

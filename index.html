@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Pere Alemany" />
+
+  <title>3D AIRLINES</title>
+  <link href="stilo.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="shortcut icon" href="https://i.ibb.co/j8p59rB/logo-aerolinea.png">
+
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Prompt:ital,wght@0,200;0,300;0,900;1,200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<script src="loader.js"></script>
+
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="module" src="model-viewer.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.contenedor').on('click', function () {
+      $(this).find('.hamburguesa').toggleClass('active');
+      $(this).siblings('.submenu').toggleClass('active');
+    });
+  });
+
+</script>
+<script>
+  $(document).ready(function () {
+    $('.des-contenedor').on('click', function () {
+      var $items = $(this).find('.items');
+      var $iconoDes = $(this).find('.icono-des');
+      var $enlace = $(this).find('.btn-descarga');
+
+      $items.toggleClass('active');
+      $iconoDes.toggleClass('active');
+
+      // Cambiar texto después de 3 segundos
+      setTimeout(function () {
+        $items.removeClass('active');
+        $iconoDes.removeClass('active');
+
+        // Actualizar el texto del enlace
+        $enlace.text('Descarga completada');
+      }, 2000); // 3000 milisegundos = 3 segundos
+    });
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    const contenedor = $('.nombre');
+    const texto = contenedor.find('#texto');
+    const tamañoBase = 70; // Tamaño de letra base: 70px
+
+    function ajustarTexto() {
+      const contenedorAncho = contenedor.innerWidth();
+      const fontSize = (contenedorAncho / texto.text().length) * 2;
+
+      texto.css('font-size', fontSize + 'px');
+    }
+
+    $(window).resize(ajustarTexto);
+    ajustarTexto();
+  });
+</script>
+
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-img">
+    <img src="https://i.ibb.co/j8p59rB/logo-aerolinea.png" alt="logo-aerolinea">
+    </div>
+    <div class="loader-order">
+    <p>3D Airlines</p>
+      
+    </div>
+  </div>
+  <div class="btn-descarga-noti" id="btn-descarga-noti">
+
+    <div class="noti-order">
+    <div class="noti-simbol">
+      <span class="material-symbols-outlined">
+      file_download_done
+      </span>
+    </div>
+    <div class="noti-text"><p>Descarga Completada</p></div>
+    </div>
+  </div>
+ <div class="order-body">
+  <header>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,600;0,300;1,200&display=swap"
+      rel="stylesheet">
+    <div class="menu">
+      <div class="contenedor">
+        <div class="hamburguesa"></div>
+      </div>
+      <ul class="submenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="alas.html">Alas</a></li>
+        <li><a href="fuselaje.html">Fuselaje</a></li>
+        <li><a href="timon.html">Timón</a></li>
+      </ul>
+    </div>
+    <div class="titulo">
+      <div class="imagen">
+        <img src="https://i.ibb.co/j8p59rB/logo-aerolinea.png">
+      </div>
+      <div class="nombre">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Prompt:ital,wght@0,200;0,300;0,900;1,200&display=swap"
+          rel="stylesheet">
+
+        <b>
+          <center>
+            <p id="texto">3D Airlines</p>
+          </center>
+        </b>
+      </div>
+    </div>
+  </header>
+
+<main>
+  
+ <div class="introduccion">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,600;0,300;1,200&display=swap"
+        rel="stylesheet">
+
+      <center>
+        <h1><b>LA EMPRESA Nº1 EN AVIONES 3D</b></h1>
+        <h2><i>Modelos de aviones 3D para imprimir.</i></h2>
+      </center>
+
+    </div>
+  
+    &nbsp;
+  
+<div class="info">
+      <div class="somos">
+        <h1><b>SOBRE NOSOTROS:</b></h1>
+        <p>Nosotros somos un grupo de estudiantes del instituto IES Baltasar Porcel, que hemos creado un modelo de avion
+          3D.</p>
+        <p> Desde hace 2 semanas, en 3D Airlines, nos hemos dedicado a crear el mejor modelo 3D para que nuestros
+          clientes puedan imprimirlos y hacer lo que quieran con ellos, ¡ya sea jugar con ellos o añadirles explosivos
+          para usar como armas!</p>
+      </div>
+      <div class="modelo">
+        <model-viewer
+          alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+          src="avion.glb" shadow-intensity="1" camera-controls touch-action="pan-z"></model-viewer>
+      </div>
+</div>
+  
+<div class="info">
+  <div class="somos">
+  <h1><b>QUE USAMOS PARA CREAR NUESTROS AVIONES?</b></h1>
+  <p>¿Tienes ganas de crear tus propios aviones? Entonces solo tienes que descargarte el programa<a href="https://www.freecad.org">FreeCAD</a>.</p>
+  </div>
+</div>
+    
+<div class="info">
+  <div class="somos">
+    <h2><u>¿Que es FreeCAD?</u></h2>
+    <p>FreeCAD es un software de modelado paramétrico 3D de código abierto diseñado para ayudar a los usuarios a crear diseños y modelos en 3D. Es una herramienta de diseño asistido por computadora (CAD) que permite a los usuarios crear objetos virtuales tridimensionales, como piezas mecánicas, arquitectura, maquinaria, electrónica y más.</p>
+<p>FreeCAD ofrece una interfaz intuitiva y amigable que facilita la creación y manipulación de objetos 3D. Utiliza un enfoque basado en la parametrización, lo que significa que los objetos se crean mediante la definición de parámetros y restricciones, lo que permite un modelado preciso y modificaciones rápidas y sencillas.</p>
+<p>
+Además de las herramientas de modelado básicas, FreeCAD ofrece una amplia gama de funciones y herramientas avanzadas. Los usuarios pueden realizar operaciones booleanas, como unión, resta e intersección, aplicar operaciones de desplazamiento, fillet y chamfer, crear bocetos 2D para luego extruirlos a 3D, y mucho más. También es posible importar y exportar una variedad de formatos de archivo, lo que facilita la colaboración con otros programas de diseño.
+</p>
+  </div> 
+   <div class="modelo1">
+    <img src="img/FreeCAD.png"></img>
+   </div>
+</div>
+
+  <div class="info">
+  <div class="somos">
+  <h1><b>IMPRESION:</b></h1>
+  <p>Para imprimir el modelo en 3D, usamos los siguientes parametros:</p>
+    <table>
+      <tr>
+        <td>Densidad</td>
+        <td>30%</td>
+      </tr>
+      <tr>
+        <td>Tiempo</td>
+        <td>4 horas</td>
+      </tr>
+      <tr>
+        <td>Material</td>
+        <td>33g de filamento bioplaxtico</td>
+      </tr>
+    </table>
+ </div>
+  </div>
+
+
+<!-- <div class="descargar">
+  <div class="des-contenedor">
+  <div class="items">
+   <div class="icono-des"><img src="img/icono-des.png"></div>
+     <a href="obj/avion.obj" class="btn-descarga" download="avion.obj" type="application/octet-stream"> Descargar Modelo</a>
+   </div>
+  </div>
+</div> -->
+
+  <!--Boton Descarga-->
+    <div class="btn-descarga-normas" id="btn-normas">
+    <div class="btn-descarga-normas-enlazes active" id="btn-enlaze" style="--ancho: 300px; ">
+        <a href="obj/avion.obj" class="btn-descarga" id="archivo" title="Descargar el modelo" download="avion.obj" type="application/octet-stream"> Descargar Modelo</a>
+
+      </div>
+      <div class="btn-descarga-normas-descargando" id="btn-descargando" style="--ancho: 50px; ">
+        <span class="material-symbols-outlined">
+        download
+        </span>
+      </div>
+
+
+      <!-- <div class="btn-descarga-normas-finalizado" id="btn-finalizado" style="--ancho: 280px; ">
+        <span class="material-symbols-outlined">
+        download_done
+        </span>
+        <p>Descarga Finalizada</p>
+      </div> -->
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+        // Variables
+        var btn_normas = $("#btn-normas");
+        var btn_enlaze = $("#btn-enlaze");
+        var btn_descargando = $("#btn-descargando");
+        var btn_finalizado = $("#btn-finalizado");
+        var btn_noti = $("#btn-descarga-noti");
+
+        btn_enlaze.click(function(){
+            btn_enlaze.removeClass('active');
+            btn_descargando.addClass('active');
+
+            setTimeout(function() {
+                btn_descargando.removeClass('active');
+                btn_enlaze.addClass('active');
+                btn_noti.addClass('spawn');
+
+                setTimeout(function() {
+                    btn_noti.removeClass('spawn');
+                }, 2000); // Eliminar la clase después de 2 segundos
+
+            }, 4000);
+        });
+    });
+
+
+  </script>
+  
+
+  </main>
+  &nbsp;
+  <footer>
+
+    <div class="participantes">
+      <div class="titulo-participantes">
+        <a><b>Participantes</b></a>
+      </div>
+      <div class="imagen-logo">
+        <li><img src="https://i.ibb.co/H4t9nQF/foto-perfil-pere.png" height="20px" width="20px"></li>
+        <li><img src="https://i.ibb.co/0KhNQK4/foto-perfil-pau.jpg" height="20px" width="20px"></li>
+        <li><img src="https://i.ibb.co/5T7kCnr/foto-perfil-uri.png" height="20px" width="20px"></li>
+        <li><img src="https://i.ibb.co/wsVTpNZ/foto-perfil-javi.png" height="20px" width="20px"></li>
+        <li><img src="https://i.ibb.co/MSSGtsp/foto-perfil-robin.png" height="20px" width="20px"></li>
+      </div>
+      <div class="lista-participantes">
+        <li><a>Pere Alemany Tomàs</a></li>
+        <li><a>Pau Cifre Vadell</a></li>
+        <li><a>Alejandro Uriel Montelongo</a></li>
+        <li><a>Javier García Monsálvez</a></li>
+        <li><a>Robin de la Cruz Melecio</a></li>
+      </div>
+    </div>
+
+
+    <div class="contacto">
+      <div class="titulo-contacto">
+        <a><b>Contacto</b></a>
+      </div>
+      <div class="lista-contactos">
+        <li><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gmail_Icon_%282013-2020%29.svg/1024px-Gmail_Icon_%282013-2020%29.svg.png"
+            height="10px" width="15px"><a>palemanyt@iesbaltasarporcel.net</a></li>
+        <li><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gmail_Icon_%282013-2020%29.svg/1024px-Gmail_Icon_%282013-2020%29.svg.png"
+            height="10px" width="15px"><a>pcifrev@iesbaltasarporcel.net</a></li>
+        <li><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gmail_Icon_%282013-2020%29.svg/1024px-Gmail_Icon_%282013-2020%29.svg.png"
+            height="10px" width="15px"><a>amontelongo@iesbaltasarporcel.net</a></li>
+        <li><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gmail_Icon_%282013-2020%29.svg/1024px-Gmail_Icon_%282013-2020%29.svg.png"
+            height="10px" width="15px"><a>jgarciam@iesbaltasarporcel.net</a></li>
+        <li><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Gmail_Icon_%282013-2020%29.svg/1024px-Gmail_Icon_%282013-2020%29.svg.png"
+            height="10px" width="15px"><a>rcruzm@iesbaltasarporcel.net</a></li>
+      </div>
+
+    </div>
+  </footer>
+ </div>
+</body>
+
+</html>
